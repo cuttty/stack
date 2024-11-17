@@ -24,11 +24,14 @@ public:
         if (last < 0) {
             throw std::out_of_range("Empty stack");
         }
-
-        T tmp = data[last];
-        data.erase(data.begin() + last);
+       data.pop_back();
         last--;
-        return tmp;
+        return data[last];
+
+        /*T tmp = data[last];
+        data.erase(data.begin() + last);
+        last--;*/
+       // return tmp;
     }
 
     void push(T value) {
@@ -56,7 +59,7 @@ public:
        }
         return false;
     };
-
+    ///for tests
     bool operator== (const Stack& other) const {
         if (last != other.last) {
             return false;
