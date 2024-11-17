@@ -59,7 +59,7 @@ public:
        }
         return false;
     };
-
+    // for tests
     bool operator== (const Stack& other) const {
         if (last != other.last) {
             return false;

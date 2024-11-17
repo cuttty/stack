@@ -27,7 +27,7 @@ TEST(Stack, can_push_and_pop_element) {
     ASSERT_EQ(S,S_exp);
 }
 
-TEST(Stack, pop_return_element_before_last) {
+TEST(Stack, pop_return_element_before_last_element) {
     Stack <int> S(3);
     S.push(2);
     S.push(7);
