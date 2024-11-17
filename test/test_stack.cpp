@@ -27,13 +27,13 @@ TEST(Stack, can_push_and_pop_element) {
     ASSERT_EQ(S,S_exp);
 }
 
-TEST(Stack, pop_return_deleted_element) {
+TEST(Stack, pop_return_element_before_last) {
     Stack <int> S(3);
     S.push(2);
     S.push(7);
     S.push(5);
 
-    ASSERT_EQ(S.pop(), 5);
+    ASSERT_EQ(S.pop(), 7);
 }
 
 TEST(Stack, cant_pop_in_empty_stack) {
